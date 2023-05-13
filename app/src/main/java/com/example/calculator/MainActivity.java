@@ -2,10 +2,14 @@ package com.example.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
 
@@ -67,13 +71,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
            solutiontv.setText(resultv.getText());
            return;
        }
-       if(buttonText.equals("back")){
-           dataCalculate = dataCalculate.substring(0,dataCalculate.length()-1);
-           return;
-       }else{
+       if(buttonText.equals("back")) {
+           if(dataCalculate.length() > 1 ) {
+               dataCalculate = dataCalculate.substring(0,dataCalculate.length()-1);
+               resultv.setText(dataCalculate);
+           }else if (dataCalculate.length() == 1){
+               solutiontv.setText("");
+               resultv.setText("0");
+               return;
+           }
+
+
+       } else{
            dataCalculate = dataCalculate + buttonText;
 
        }
+
 
        solutiontv.setText(dataCalculate);
 

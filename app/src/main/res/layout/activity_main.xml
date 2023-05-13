@@ -19,10 +19,9 @@
     <TextView
         android:id="@+id/solution_tv"
         android:layout_width="match_parent"
-        android:layout_height="59dp"
+        android:layout_height="80dp"
         android:layout_gravity="center"
         android:layout_margin="20dp"
-        android:gravity="center"
         android:textAlignment="textEnd"
         android:textColor="@color/white"
         android:textSize="30dp" />
@@ -105,7 +104,7 @@
 
         <Button
             style="@style/ButtonOperations"
-            android:text="x"
+            android:text="*"
             android:id="@+id/btn_multiple"
             android:textSize="20dp">
 

@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Calculator" parent="Theme.AppCompat">
         <item name="colorOnPrimary">@color/orange</item>
-        <item name="color">@color/darkblack</item>
+        <item name="color">@color/teal_200</item>
         <item name="colorOnSecondary">@color/white</item>
 
 
